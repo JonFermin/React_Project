@@ -1,9 +1,13 @@
 import React from 'react';
 import { IndexRoute, Router, Route } from 'react-router';
 
-import App from './containers/App';
-import Posts from './containers/Posts';
-import AddPost from './containers/AddPost';
+import App from './globals/App';
+import ViewPost from './globals/ViewPost';
+import Posts from './components/Posts';
+import AddPost from './components/AddPost';
+
+
+
 
 const Routes = (props) => (
   <Router {...props}>
@@ -11,6 +15,7 @@ const Routes = (props) => (
       <IndexRoute component={ Posts } />
       <Route path="/posts" component={ Posts } />
       <Route path="/add-post" component={ AddPost } />
+      <Route name="view-post/:value" handler={ViewPost} />
     </Route>
   </Router>
 );
