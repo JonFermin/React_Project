@@ -6,11 +6,12 @@ import { Link } from 'react-router';
 
 class ViewPost extends Component {  
   render() {
-    console.log(this.props.value);
+    let post_id = this.props.location.hash;
     return (
     	<div>
-	      <h1> hello </h1>
-	      <Link to="/"> </Link>
+	      <h1> Child Component </h1>
+	  		
+	      <Link to="/"> {post_id} </Link>
 	    </div>
     );
   }

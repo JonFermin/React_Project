@@ -15,7 +15,9 @@ const Routes = (props) => (
       <IndexRoute component={ Posts } />
       <Route path="/posts" component={ Posts } />
       <Route path="/add-post" component={ AddPost } />
-      <Route name="view-post/:value" handler={ViewPost} />
+      <Route path="/view-post" component={ ViewPost } >
+      	<Route path="/view-post/:id" component={ViewPost} />
+      </Route>
     </Route>
   </Router>
 );

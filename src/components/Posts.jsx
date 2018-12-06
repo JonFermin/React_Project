@@ -18,10 +18,13 @@ class Posts extends Component {
     });
   }
 
+  constructor(){ 
+    super();
+  }
+
   render() {
 
     let posts = this.props.posts;
-    // console.log(posts);
     let _this = this;
 
     if (!posts) {
@@ -42,12 +45,17 @@ class Posts extends Component {
             return (
               <div key={key}>
                 <Link
-                  to={`/ViewPost/${ key }`}
+                  to={{
+                    pathname: '/view-post/',
+                    hash: key.toString(),
+                    state: { post_id: '{key}' },
+                  }}
                 > { posts[key].title }
                 </Link>
 
                 <div>Upvotes: { posts[key].upvote }</div>
                 <div>Downvotes: { posts[key].downvote }</div>
+
                 <div>
                   <button 
                     onClick={ _this.handleUpvote.bind(this, posts[key], key) }
