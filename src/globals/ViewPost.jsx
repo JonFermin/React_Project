@@ -4,6 +4,13 @@ import React, { Component } from 'react';
 // import config from './firebase-config';
 import { Link } from 'react-router';
 
+import '../css/comment.css';
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+</style>
+
+
 class ViewPost extends Component {  
   render() {
     let post_id = this.props.location.hash;
