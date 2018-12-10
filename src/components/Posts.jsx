@@ -20,10 +20,6 @@ class Posts extends Component {
     });
   }
 
-  constructor(){ 
-    super();
-  }
-
   render() {
 
     let posts = this.props.posts;
@@ -61,7 +57,7 @@ class Posts extends Component {
                     <FontAwesome
                       className='sortUp'
                       name='sort-up'
-                      size='1x'
+                      // size='lg'
                       // spin
                     />
                 { posts[key].upvote }</div>
@@ -70,7 +66,7 @@ class Posts extends Component {
                   <FontAwesome
                       className='sortDown'
                       name='sort-down'
-                      size='1x'
+                      // size='1x'
                       // spin
                     />
                  { posts[key].downvote }</div>

@@ -1,0 +1,22 @@
+h1{
+	font-family: 'Source Sans Pro', sans-serif;
+	size: 2em;
+}
+
+a{
+	font-family: 'Sorce Sans Pro', sans-serif;
+	font-style: inherit;
+	color: #070707;
+}
+
+a:hover{
+	color: #a7a7a7;
+}
+
+.App{
+	align-content: center;
+}
+
+.Nav{
+	text-align: center;
+}

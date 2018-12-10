@@ -4,6 +4,8 @@ import { withRouter } from "react-router";
 
 import { Link } from 'react-router';
 
+var FontAwesome = require('react-fontawesome');
+
 // import * as firebase from "firebase";
 
 // import config from './firebase-config';
@@ -22,6 +24,39 @@ import { Link } from 'react-router';
 
 
 class ViewPost extends Component { 
+
+  handleUpvote = (post, key) => {
+    this.props.firebase.ref('posts/' + key).set({
+      title: post.title,
+      upvote: post.upvote + 1,
+      downvote: post.downvote
+    });
+  }
+
+  handleDownvote = (post, key) => {
+    this.props.firebase.ref('posts/' + key).set({
+      title: post.title,
+      upvote: post.upvote,
+      downvote: post.downvote + 1
+    });
+  }
+
+  handleCommentUpvote = (post, key) => {
+    this.props.firebase.ref('posts/' + key).set({
+      title: post.title,
+      upvote: post.upvote + 1,
+      downvote: post.downvote
+    });
+  }
+
+  handleCommentDownvote = (post, key) => {
+    this.props.firebase.ref('posts/' + key).set({
+      title: post.title,
+      upvote: post.upvote,
+      downvote: post.downvote + 1
+    });
+  }
+
 
   constructor(props){
     super(props);
@@ -49,10 +84,18 @@ class ViewPost extends Component {
     });
   };
 	render() {
-		
+		let posts = this.props.posts;
+    let _this = this;
 		var key = this.props.location.state.id.key;
 		var current_post = this.props.firebase.ref("posts/" + key );
     
+    if (this.props.loading) {
+      return (
+        <div>
+          <img className="loading" src="https://loading.io/spinners/typing/lg.-text-entering-comment-loader.gif"/>
+        </div>
+      );
+    }
 
 
 		function grab_post() {
@@ -65,15 +108,34 @@ class ViewPost extends Component {
 	      			)
 	      	});
 	     };
-		// var title="loading"; 
-		// var upvote="loading"; 
-		// var downvote="loading";
+
 		return (
 	      <div className="Posts">
           <div className="Title">
-            {this.state.upvote}
-            {this.state.downvote}
             {this.state.title}
+           
+          <div>
+          <div className="up" onClick={this.handleUpvote.bind(_this, posts[key], key) }
+                  type="button"> 
+                  <FontAwesome
+                    className='sortUp'
+                    name='sort-up'
+                    // size='lg'
+                    // spin
+                  />
+            {_this.state.upvote}</div>
+            <div className="down" onClick={this.handleDownvote.bind(_this, posts[key], key) }
+                type="button"> 
+              <FontAwesome
+                  className='sortDown'
+                  name='sort-down'
+                  // size='1x'
+                  // spin
+                />
+             {_this.state.downvote}</div>
+          </div>
+            
+            
           </div>
           <div className="For">
 
