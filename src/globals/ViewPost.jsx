@@ -2,22 +2,10 @@ import React, { Component } from 'react';
 
 import { withRouter } from "react-router";
 
+import AddComment from "../components/AddComment";
+
 var FontAwesome = require('react-fontawesome');
 
-// import * as firebase from "firebase";
-
-// import config from './firebase-config';
-
-	// let post_id = this.props.location.params.id;
-    // console.log(post_id);
-    // <Link to="/"> {post_id} </Link>
-
-    // ref.child('downvote').once('value').then(function(data){
-    //  downvote = data.val();
-    // });
-    // ref.child('upvote').once('value').then(function(data){
-    //  upvote = data.val();
-    // });
 
 
 
@@ -127,6 +115,7 @@ class ViewPost extends Component {
           <div className="Against">
 
           </div> 
+          <AddComment/>
 	      </div>
 	    );
 	}
