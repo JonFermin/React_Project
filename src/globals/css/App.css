@@ -107,3 +107,33 @@ html {
   width: 200px;
   height: auto;
   margin: 0 auto; }
+
+
+
+#add-post{
+  width: 100%;
+  margin-top: 50px;
+  height: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  font-family: 'Sorce Sans Pro', sans-serif;
+  font-size: 1.2em;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+  outline: none;
+}
+
+.submit{
+  margin-left: 90%;
+  width: 75px;
+  height: 50px;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-family: 'Sorce Sans Pro', sans-serif;
+  font-size: 1em;
+  outline: none;
+}
+
+

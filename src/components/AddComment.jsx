@@ -35,8 +35,11 @@ class AddComment extends Component {
   render() {
     return (
       <div>
-        <input type="text" placeholder="Add For"/>
-        <input type="button" value="what"/> 
+        <input type="text" placeholder="Add For" id="c-for"/>
+        <input type="button" value="Submit"/> 
+
+        <input type="text" placeholder="Add Against" id="c-against"/>
+        <input type="button" value="Submit"/> 
       </div>
     );
   }

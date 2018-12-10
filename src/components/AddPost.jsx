@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../globals/css/App.css';
 
 class AddPost extends Component {
   constructor() {
@@ -40,10 +41,12 @@ class AddPost extends Component {
           placeholder="Write the title of your post" 
           onChange={ this.handleChange } 
           value={ this.state.title }
+          id="add-post"
         />
         <button 
           type="submit" 
           onClick={ this.handleSubmit }
+          class="submit"
         >
           Submit
         </button>
