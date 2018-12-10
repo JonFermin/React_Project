@@ -42,8 +42,8 @@ class ViewPost extends Component {
         console.log(snapshot.val());
       this.setState({
         title: snapshot.val().title,
-        upvote: snapshot.val().downvote,
-        downvote: snapshot.val().upvote,
+        upvote: snapshot.val().upvote,
+        downvote: snapshot.val().downvote,
         for: snapshot.val()
       });
     });
@@ -70,10 +70,17 @@ class ViewPost extends Component {
 		// var downvote="loading";
 		return (
 	      <div className="Posts">
-          {this.state.upvote}
-          {this.state.downvote}
-          {this.state.title}
+          <div className="Title">
+            {this.state.upvote}
+            {this.state.downvote}
+            {this.state.title}
+          </div>
+          <div className="For">
 
+          </div> 
+          <div className="Against">
+
+          </div> 
 	      </div>
 	    );
 	}

@@ -37,7 +37,7 @@ class Posts extends Component {
     if (this.props.loading) {
       return (
         <div>
-          Loading...
+          <img className="loading" src="https://loading.io/spinners/typing/lg.-text-entering-comment-loader.gif"/>
         </div>
       );
     }
