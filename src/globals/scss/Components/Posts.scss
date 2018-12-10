@@ -1,0 +1,23 @@
+.Posts{
+	grid-column: 2;
+	margin-top: 100px;
+	.single-post{
+		text-transform: uppercase;
+		padding: 10px;
+		background: white;
+		margin-top: 10px;
+		.up, .down{
+		font-weight: 400;
+		}
+
+		.down{
+			
+		}
+
+		.link{
+			font-weight: 700;
+		}
+	}
+	
+}
+

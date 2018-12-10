@@ -1,0 +1,17 @@
+.Nav{
+	grid-column: 1;
+	grid-template-rows: 2;
+}
+
+.logo{
+	width: 100px;
+
+	height: auto;
+}
+
+.nav-list{
+	padding-left: 0;
+	color: green;
+	text-align: left;
+	list-style-type: none;
+}

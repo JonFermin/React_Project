@@ -3,7 +3,7 @@ import * as firebase from "firebase";
 
 import config from './firebase-config';
 import Nav from './Nav';
-import './App.css';
+import './css/App.css';
 
 class App extends Component {
   constructor() {

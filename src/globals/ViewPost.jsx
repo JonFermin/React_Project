@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 import { withRouter } from "react-router";
 
-import { Link } from 'react-router';
-
 var FontAwesome = require('react-fontawesome');
 
 // import * as firebase from "firebase";
@@ -87,33 +85,19 @@ class ViewPost extends Component {
 		let posts = this.props.posts;
     let _this = this;
 		var key = this.props.location.state.id.key;
-		var current_post = this.props.firebase.ref("posts/" + key );
     
     if (this.props.loading) {
       return (
         <div>
-          <img className="loading" src="https://loading.io/spinners/typing/lg.-text-entering-comment-loader.gif"/>
+          <img className="loading" alt="loading icon" src="https://loading.io/spinners/typing/lg.-text-entering-comment-loader.gif"/>
         </div>
       );
     }
 
-
-		function grab_post() {
-			current_post.child('title').once('value').then(function(data){
-				console.log(data.val());
-	      			return (
-	      				<div class='kms'>
-	      				{this.state.title}
-	      				</div>
-	      			)
-	      	});
-	     };
-
 		return (
-	      <div className="Posts">
-          <div className="Title">
+	      <div className="ViewPosts">
+          <div className="title">
             {this.state.title}
-           
           <div>
           <div className="up" onClick={this.handleUpvote.bind(_this, posts[key], key) }
                   type="button"> 

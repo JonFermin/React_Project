@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import './Posts.css';
 var FontAwesome = require('react-fontawesome');
 
 class Posts extends Component {
@@ -33,7 +32,7 @@ class Posts extends Component {
     if (this.props.loading) {
       return (
         <div>
-          <img className="loading" src="https://loading.io/spinners/typing/lg.-text-entering-comment-loader.gif"/>
+          <img className="loading" alt="loading-logo" src="https://loading.io/spinners/typing/lg.-text-entering-comment-loader.gif"/>
         </div>
       );
     }
@@ -42,34 +41,36 @@ class Posts extends Component {
       <div className="Posts">
         { Object.keys(posts).map(function(key) {
             return (
-              <div className="link" key={key}>
-                <Link
-                  to={{
-                    pathname: '/view-post/',
-                    hash: key.toString(),
-                    state: { id: {key} },
-                  }}
-                > { posts[key].title }
-                </Link>
+              <div className="single-post">
+                <div className="link" key={key}>
+                  <Link
+                    to={{
+                      pathname: '/view-post/',
+                      hash: key.toString(),
+                      state: { id: {key} },
+                    }}
+                  > { posts[key].title }
+                  </Link>
 
-                <div className="up" onClick={ _this.handleUpvote.bind(this, posts[key], key) }
-                    type="button"> 
+                  <div className="up" onClick={ _this.handleUpvote.bind(this, posts[key], key) }
+                      type="button"> 
+                      <FontAwesome
+                        className='sortUp'
+                        name='sort-up'
+                        // size='lg'
+                        // spin
+                      />
+                  { posts[key].upvote }</div>
+                  <div className="down" onClick={ _this.handleDownvote.bind(this, posts[key], key) }
+                      type="button"> 
                     <FontAwesome
-                      className='sortUp'
-                      name='sort-up'
-                      // size='lg'
-                      // spin
-                    />
-                { posts[key].upvote }</div>
-                <div className="down" onClick={ _this.handleDownvote.bind(this, posts[key], key) }
-                    type="button"> 
-                  <FontAwesome
-                      className='sortDown'
-                      name='sort-down'
-                      // size='1x'
-                      // spin
-                    />
-                 { posts[key].downvote }</div>
+                        className='sortDown'
+                        name='sort-down'
+                        // size='1x'
+                        // spin
+                      />
+                   { posts[key].downvote }</div>
+                </div>
               </div>
             );
         })}

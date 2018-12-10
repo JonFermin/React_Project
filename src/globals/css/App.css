@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700");
+.Nav {
+  grid-column: 1;
+  grid-template-rows: 2; }
+
+.logo {
+  width: 100px;
+  height: auto; }
+
+.nav-list {
+  padding-left: 0;
+  color: green;
+  text-align: left;
+  list-style-type: none; }
+
+.ViewPosts .title {
+  text-transform: capitalize;
+  color: red; }
+
+.ViewPosts .up {
+  color: green; }
+
+.ViewPosts .down {
+  color: green; }
+
+.Posts {
+  grid-column: 2;
+  margin-top: 100px; }
+  .Posts .single-post {
+    text-transform: uppercase;
+    padding: 10px;
+    background: white;
+    margin-top: 10px; }
+    .Posts .single-post .up, .Posts .single-post .down {
+      font-weight: 400; }
+    .Posts .single-post .link {
+      font-weight: 700; }
+
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.App {
+  display: grid;
+  background: lightgrey;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100vh; }
+
+.loading {
+  width: 200px;
+  height: auto;
+  margin: 0 auto; }

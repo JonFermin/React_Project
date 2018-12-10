@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import './Nav.css';
 
 class Nav extends Component {
   render() {
     return (
       <div className="Nav">
-      	<img src="http://flyhamilton.ca/app/uploads/2017/01/test-img.jpg" className="logo"/>
+      	<img className="logo" alt="logo-icon" src="http://flyhamilton.ca/app/uploads/2017/01/test-img.jpg" />
       	<ul className="nav-list">
       		<li> 
         		<Link to={"/"} > Home </Link>

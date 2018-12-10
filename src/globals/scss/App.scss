@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700');
+
+@import "./Components/Nav";
+@import "./Components/ViewPost";
+@import "./Components/Posts";
+
+@import "./Globals/_colors";
+@import "./Globals/_mixins";
+
+*{
+	font-family: 'Source Sans Pro', sans-serif;
+	text-decoration: none;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.App{
+	display: grid;
+	background: lightgrey;
+	grid-template-columns: 1fr 1fr 1fr;
+	height: 100vh;
+}
+
+.loading{
+	width: 200px;
+	height: auto;
+	margin: 0 auto;
+}

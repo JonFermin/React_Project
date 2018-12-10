@@ -9,6 +9,7 @@
     "firebase": "^4.1.1",
     "font-awesome": "^4.7.0",
     "i": "^0.3.6",
+    "node-sass": "^4.11.0",
     "npm": "^6.4.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
@@ -23,6 +24,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sassy": "node-sass --watch src/globals/scss/App.scss src/globals/css/App.css"
   }
 }

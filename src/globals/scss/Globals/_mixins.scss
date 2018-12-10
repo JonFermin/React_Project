@@ -1,0 +1,41 @@
+// http://www.carbondesignsystem.com/
+
+
+
+@mixin typescale($size) {
+  @if map-has-key($typescale-map, $size) {
+    font-size: map-get($typescale-map, $size);
+  } @else {
+    @warn 'This is not a step of the Carbon Type Scale!';
+  }
+}
+
+@function rem($px) {
+  @return ($px / $base-font-size) * 1rem;
+}
+
+@function em($px) {
+  @return ($px / $base-font-size) * 1em;
+}
+
+
+
+// There are two line heights to choose from. One for headings and one for body text
+@mixin line-height($el) {
+  @if $el == 'heading' {
+    line-height: 1.25;
+  } @else if $el == 'body' {
+    line-height: 1.5;
+  } @else if map-has-key($line-height-map, $el) {
+    line-height: map-get($line-height-map, $el);
+  } @else {
+    @warn 'Invalid argument used for @mixin line-height($el) . Please use 'heading' or 'body'.';
+  }
+}
+
+// https://stackoverflow.com/questions/12788262/sass-browser-vendor-prefixes
+@mixin vendor-prefix($name, $value) {
+  @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+    #{$vendor}#{$name}: #{$value};
+  }
+}
