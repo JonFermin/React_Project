@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import './Posts.css';
+var FontAwesome = require('react-fontawesome');
 
 class Posts extends Component {
   handleUpvote = (post, key) => {
@@ -25,6 +27,7 @@ class Posts extends Component {
   render() {
 
     let posts = this.props.posts;
+    // console.log(posts);
     let _this = this;
 
     if (!posts) {
@@ -43,33 +46,34 @@ class Posts extends Component {
       <div className="Posts">
         { Object.keys(posts).map(function(key) {
             return (
-              <div key={key}>
+              <div className="link" key={key}>
                 <Link
                   to={{
                     pathname: '/view-post/',
                     hash: key.toString(),
-                    state: { post_id: '{key}' },
+                    state: { id: {key} },
                   }}
                 > { posts[key].title }
                 </Link>
 
-                <div>Upvotes: { posts[key].upvote }</div>
-                <div>Downvotes: { posts[key].downvote }</div>
-
-                <div>
-                  <button 
-                    onClick={ _this.handleUpvote.bind(this, posts[key], key) }
-                    type="button"
-                  >
-                    Upvote
-                  </button>
-                  <button 
-                    onClick={ _this.handleDownvote.bind(this, posts[key], key) }
-                    type="button"
-                  >
-                    Downvote
-                  </button>
-                </div>
+                <div className="up" onClick={ _this.handleUpvote.bind(this, posts[key], key) }
+                    type="button"> 
+                    <FontAwesome
+                      className='sortUp'
+                      name='sort-up'
+                      size='1x'
+                      // spin
+                    />
+                { posts[key].upvote }</div>
+                <div className="down" onClick={ _this.handleDownvote.bind(this, posts[key], key) }
+                    type="button"> 
+                  <FontAwesome
+                      className='sortDown'
+                      name='sort-down'
+                      size='1x'
+                      // spin
+                    />
+                 { posts[key].downvote }</div>
               </div>
             );
         })}
