@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700");
-body{
-  font-family: 'Source Sans Pro', sans-serif;
-  background-color: white;
-}
 .Nav {
   grid-column: 1;
   grid-template-rows: 2;
@@ -28,38 +24,59 @@ body{
 .ViewPosts .down {
   color: green; }
 
-
-
-
-
-
-
-
-
 .Posts {
-  grid-column: 1;
-  margin-top: 150px; 
-   position: absolute;
-  left: 25%;
-  margin-left:0px;
-  width: 50%;
-}
-
-.Posts .single-post {
-  padding: 10px;
-  background: #f2f2f2;
-  margin-top: 30px; 
-  border-radius: 4px;
-  height: 100px;
-}
-
-.Posts .single-post .up, .Posts .single-post .down {
-  font-weight: 400; 
-}
-
-.Posts .single-post .link {
-  font-weight: 700; 
-}
+  grid-column: 2;
+  padding-top: 20px;
+  overflow-y: scroll;
+  height: 100vh; }
+  .Posts .single-post {
+    width: 100%;
+    text-transform: uppercase;
+    padding: 10px;
+    background: #f2f2f2;
+    margin-top: 30px;
+    border-radius: 4px;
+    min-height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr; }
+  .Posts #postHeader {
+    margin-top: 25px;
+    grid-column: 2;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    transition: .2s ease; }
+    .Posts #postHeader:hover {
+      color: grey; }
+  .Posts .buttonContainer {
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: 12px;
+    margin-left: 20px;
+    font-size: 20px; }
+    .Posts .buttonContainer:hover .up, .Posts .buttonContainer:hover .down {
+      font-weight: 400; }
+    .Posts .buttonContainer .sortUp, .Posts .buttonContainer .sortDown {
+      font-size: 36px; }
+    .Posts .buttonContainer .sortUp {
+      position: relative;
+      top: 10px;
+      transition: .2s ease; }
+      .Posts .buttonContainer .sortUp:hover {
+        color: green; }
+    .Posts .buttonContainer .sortDown {
+      transition: .2s ease; }
+      .Posts .buttonContainer .sortDown:hover {
+        color: red; }
+    .Posts .buttonContainer .up, .Posts .buttonContainer .down {
+      margin-left: 3px; }
+    .Posts .buttonContainer .up {
+      position: relative; }
+    .Posts .buttonContainer .down {
+      position: relative;
+      top: 5px; }
 
 * {
   font-family: 'Source Sans Pro', sans-serif;
@@ -70,60 +87,11 @@ body{
 
 .App {
   display: grid;
-  background: white;
-  grid-template-columns: 1fr 1fr 1fr;
+  background: lightgrey;
+  grid-template-columns: 1fr 2fr 1fr;
   height: 100vh; }
 
 .loading {
   width: 200px;
   height: auto;
   margin: 0 auto; }
-
-
-#postHeader{
-  font-size: 1.5em;
-  margin-top: 12px;
-  margin-left: 20px;
-  font-weight: 700;
-  text-decoration: none;
-  color: black;
-  transition: .3s ease;
-}
-
-#postHeader:hover{
-  color: grey;
-}
-
-.buttonContainer{
-  margin-left: -65px;
-  margin-top: -50px;
-}
-
-.up{
-  width: 90px;
-  height: 50px;
-  border: 0;
-  background: url("../../img/up.png") no-repeat;
-
-  background-size: 40px 40px;
-  background-position: -10% 50%;
-}
-
-.down{
-  
-
-  width: 90px;
-  height: 50px;
-  border: 0;
-  background: url("../../img/down.png") no-repeat;
-
-  background-size: 40px 40px;
-  background-position: -10% 50%;
-
-}
-
-span{
-  position: absolute;
-  margin-top: 1%;
-  left: -6%;
-}

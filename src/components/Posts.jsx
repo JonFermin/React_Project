@@ -44,25 +44,33 @@ class Posts extends Component {
         { Object.keys(posts).map(function(key) {
             return (
               <div className="single-post">
-                <div className="link" key={key}>
-                  <Link
+                  <Link id="postHeader" className="link" key={key}
                     to={{
                       pathname: '/view-post/',
                       hash: key.toString(),
                       state: { id: {key} },
                     }}
-                  > { <h1 id = "postHeader">posts[key].title</h1> }
+                  >  {posts[key].title}
                   </Link>
-
-                  <div class = "buttonContainer">
-                      <div className="up" onClick={ _this.handleUpvote.bind(this, posts[key], key) }
-                          type="button"> 
-                      <span>{ posts[key].upvote }</span></div>
-                      <div className="down" onClick={ _this.handleDownvote.bind(this, posts[key], key) }
-                          type="button"> 
-                       <span>{ posts[key].downvote }</span></div>
-                  </div>
-                  
+                  <div className = "buttonContainer">
+                      <div onClick={ _this.handleUpvote.bind(this, posts[key], key) }> 
+                          <FontAwesome
+                            className='sortUp'
+                            name='sort-up'
+                            size='lg'
+                            // spin
+                          />
+                          <span className="up">{ posts[key].upvote }</span>
+                      </div>
+                      <div onClick={ _this.handleDownvote.bind(this, posts[key], key) }> 
+                          <FontAwesome
+                            className='sortDown'
+                            name='sort-down'
+                            size='lg'
+                            // spin
+                          />
+                        <span className="down">{ posts[key].downvote }</span>
+                      </div>
                   </div>
               </div>
             );

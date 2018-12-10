@@ -1,23 +1,82 @@
 .Posts{
 	grid-column: 2;
-	margin-top: 10px;
+	padding-top: 20px;
+
+	overflow-y: scroll;
+	height: 100vh;
+
 	.single-post{
+		width: 100%;
 		text-transform: uppercase;
 		padding: 10px;
-		background: blue;
-		margin-top: 100px;
-		.up, .down{
-		font-weight: 400;
-		}
+		background: #f2f2f2;
+		margin-top: 30px; 
+		border-radius: 4px;
+		min-height: 100px;
 
-		.down{
-			
-		}
-
-		.link{
-			font-weight: 700;
+		display: grid;
+		grid-template-columns: 1fr 5fr;
+		grid-template-rows: 1fr;
+		
+	}
+	#postHeader{
+		margin-top: 25px;
+		grid-column: 2;
+		font-size: 1.5em;
+		font-weight: 700;
+		text-decoration: none;
+		color: black;
+		transition: .2s ease;
+		&:hover{
+		  color: grey;
 		}
 	}
-	
+
+	.buttonContainer {
+		grid-column: 1;
+		grid-row: 1;
+		margin-top: 12px;
+		margin-left: 20px;
+		font-size: 20px;
+
+		&:hover{
+			.up, .down{
+			font-weight: 400;
+			}
+		}
+		.sortUp, .sortDown{
+			font-size: 36px;
+		}
+
+		.sortUp{
+			position: relative;
+			top:10px;
+			transition: .2s ease;
+			&:hover{
+				color: green;
+			}
+		}
+		.sortDown{
+			transition: .2s ease;
+			&:hover{
+				color: red;
+			}
+		}
+		.up, .down{
+			margin-left: 3px;
+		}
+		.up{
+			position: relative;
+		}
+		.down{
+			position: relative;
+			top: 5px;
+
+		}
+	}
 }
+
+
+
+
 
