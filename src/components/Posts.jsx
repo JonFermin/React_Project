@@ -38,6 +38,8 @@ class Posts extends Component {
     }
                 // <div> { JSON.stringify(key) } </div>
     return (
+
+      
       <div className="Posts">
         { Object.keys(posts).map(function(key) {
             return (
@@ -49,28 +51,19 @@ class Posts extends Component {
                       hash: key.toString(),
                       state: { id: {key} },
                     }}
-                  > { posts[key].title }
+                  > { <h1 id = "postHeader">posts[key].title</h1> }
                   </Link>
 
-                  <div className="up" onClick={ _this.handleUpvote.bind(this, posts[key], key) }
-                      type="button"> 
-                      <FontAwesome
-                        className='sortUp'
-                        name='sort-up'
-                        // size='lg'
-                        // spin
-                      />
-                  { posts[key].upvote }</div>
-                  <div className="down" onClick={ _this.handleDownvote.bind(this, posts[key], key) }
-                      type="button"> 
-                    <FontAwesome
-                        className='sortDown'
-                        name='sort-down'
-                        // size='1x'
-                        // spin
-                      />
-                   { posts[key].downvote }</div>
-                </div>
+                  <div class = "buttonContainer">
+                      <div className="up" onClick={ _this.handleUpvote.bind(this, posts[key], key) }
+                          type="button"> 
+                      <span>{ posts[key].upvote }</span></div>
+                      <div className="down" onClick={ _this.handleDownvote.bind(this, posts[key], key) }
+                          type="button"> 
+                       <span>{ posts[key].downvote }</span></div>
+                  </div>
+                  
+                  </div>
               </div>
             );
         })}
