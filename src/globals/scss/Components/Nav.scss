@@ -17,3 +17,20 @@
 	text-align: left;
 	list-style-type: none;
 }
+
+#writeTest{
+	width: 75px;
+	height: 75px;
+	transition: .3s ease;
+}
+
+#writeTest:hover{
+opacity: .5;
+}
+
+
+.writeDiv{
+	position: absolute;
+	left: 95%;
+	top: 5%;
+}
