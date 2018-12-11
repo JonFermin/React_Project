@@ -1,16 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700");
-html {
-    overflow: scroll;
-    overflow-x: hidden;
-}
-::-webkit-scrollbar {
-    width: 0px;  /* remove scrollbar space */
-    background: transparent;  /* optional: just make scrollbar invisible */
-}
-/* optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-    background: #FF0000;
-}
 .Nav {
   grid-column: 1;
   grid-template-rows: 2;
@@ -27,14 +15,22 @@ html {
   list-style-type: none; }
 
 .ViewPosts .title {
-  text-transform: capitalize;
-  color: red; }
+  width: 100%;
+  text-transform: uppercase;
+  padding: 10px;
+  background: #f2f2f2;
+  margin-top: 30px;
+  border-radius: 4px;
+  min-height: 100px;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr; }
 
 .ViewPosts .up {
-  color: green; }
+  color: #404040; }
 
 .ViewPosts .down {
-  color: green; }
+  color: #404040; }
 
 .Posts {
   grid-column: 2;
@@ -107,33 +103,3 @@ html {
   width: 200px;
   height: auto;
   margin: 0 auto; }
-
-
-
-#add-post{
-  width: 100%;
-  margin-top: 50px;
-  height: 50px;
-  padding: 20px;
-  border-radius: 5px;
-  font-family: 'Sorce Sans Pro', sans-serif;
-  font-size: 1.2em;
-}
-
-input[type=text]:focus {
-  border: 3px solid #555;
-  outline: none;
-}
-
-.submit{
-  margin-left: 90%;
-  width: 75px;
-  height: 50px;
-  border-radius: 5px;
-  margin-top: 20px;
-  font-family: 'Sorce Sans Pro', sans-serif;
-  font-size: 1em;
-  outline: none;
-}
-
-

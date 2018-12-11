@@ -84,39 +84,43 @@ class ViewPost extends Component {
 
 		return (
 	      <div className="ViewPosts">
+          
           <div className="title">
             {this.state.title}
-          <div>
-          <div className="up" onClick={this.handleUpvote.bind(_this, posts[key], key) }
+          </div>  
+          
+          <div className="buttonContainer">
+            
+            <div className="up" onClick={this.handleUpvote.bind(_this, posts[key], key) }
                   type="button"> 
                   <FontAwesome
                     className='sortUp'
                     name='sort-up'
-                    // size='lg'
-                    // spin
+                    
                   />
-            {_this.state.upvote}</div>
+            {_this.state.upvote}
+            </div>
+            
             <div className="down" onClick={this.handleDownvote.bind(_this, posts[key], key) }
                 type="button"> 
               <FontAwesome
                   className='sortDown'
                   name='sort-down'
-                  // size='1x'
-                  // spin
+                  
                 />
-             {_this.state.downvote}</div>
-          </div>
+             {_this.state.downvote}
+            </div>
+
+          </div>  
             
             
-          </div>
-          <div className="For">
+          
+          
 
-          </div> 
-          <div className="Against">
-
-          </div> 
+          
           <AddComment/>
-	      </div>
+         </div> 
+	       
 	    );
 	}
 };

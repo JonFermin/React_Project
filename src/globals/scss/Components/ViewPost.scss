@@ -1,13 +1,62 @@
 .ViewPosts{
 	.title{
-		text-transform: capitalize;
-		color: red;
+		width: 100%;
+		text-transform: uppercase;
+		padding: 10px;
+		background: #f2f2f2;
+		margin-top: 30px; 
+		border-radius: 4px;
+		min-height: 100px;
+
+		display: grid;
+		grid-template-columns: 1fr 5fr;
+		grid-template-rows: 1fr;
 	}
-	.up{
-		color: green;
+	
+	.buttonContainer {
+		grid-column: 1;
+		grid-row: 1;
+		margin-top: 12px;
+		margin-left: 20px;
+		font-size: 20px;
+
+		&:hover{
+			.up, .down{
+			font-weight: 400;
+			}
+		}
+		.sortUp, .sortDown{
+			font-size: 36px;
+		}
+
+		.sortUp{
+			position: relative;
+			top:10px;
+			transition: .2s ease;
+			&:hover{
+				color: green;
+			}
+		}
+		.sortDown{
+			transition: .2s ease;
+			&:hover{
+				color: red;
+			}
+		}
+		.up, .down{
+			margin-left: 3px;
+		}
+		.up{
+			position: relative;
+		}
+		.down{
+			position: relative;
+			top: 5px;
+
+		}
 	}
-	.down{
-		color: green;
-	}
+}
 
 }
+
+
