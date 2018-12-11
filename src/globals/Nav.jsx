@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import logo from './DQ.png';
+
 
 class Nav extends Component {
   render() {
     return (
       <div className="Nav">
-      	<img className="logo" alt="logo-icon" src="http://flyhamilton.ca/app/uploads/2017/01/test-img.jpg" />
+      	<Link to={"/"}><img className="logo" alt="logo-icon" src={logo} /></Link>
       	<ul className="nav-list">
-      		<li> 
-        		<Link to={"/"} > Home </Link>
-        	</li>
         	<li>
         		<Link to={"add-post"} >Add Post </Link>
         	</li>

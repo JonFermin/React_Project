@@ -1,7 +1,9 @@
 .Nav{
 	grid-column: 1;
 	grid-template-rows: 2;
-	font-size: 20pt
+	font-size: 20pt;
+	padding: 10px;
+	margin: 10px;
 }
 
 .logo{
@@ -11,7 +13,6 @@
 }
 
 .nav-list{
-	padding-left: 0;
 	color: green;
 	text-align: left;
 	list-style-type: none;
