@@ -111,7 +111,7 @@ class ViewPost extends Component {
           <div className = "comment_section">
           <div className = "LEFT">
           { !!current.for &&
-            Object.keys(current.for).map(function(key){
+            Object.keys(current.for).reverse().map(function(key){
               return(
                   <div className="for_comments">
                   <p className = "comment"> {current.for[key].text} </p>

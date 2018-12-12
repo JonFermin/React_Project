@@ -41,7 +41,7 @@ class Posts extends Component {
 
       
       <div className="Posts">
-        { Object.keys(posts).map(function(key) {
+        { Object.keys(posts).reverse().map(function(key) {
             return (
               <div className="single-post">
                   <Link id="postHeader" className="link" key={key}

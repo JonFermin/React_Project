@@ -40,7 +40,8 @@
 .ViewPosts .comment_section {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 12px; }
+  grid-gap: 12px;
+  grid-auto-flow: dense; }
 
 .ViewPosts .against_comments, .ViewPosts .for_comments {
   display: grid;
@@ -84,7 +85,6 @@
 
 .Posts {
   grid-column: 2;
-  background: #f1f1f1;
   padding-left: 12px;
   padding-right: 12px;
   overflow-y: scroll;
