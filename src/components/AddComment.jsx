@@ -60,29 +60,33 @@ class AddComment extends Component {
 
   render() {
     return (
-      <div>
-        <textarea 
-          placeholder="Add For" 
-          onChange={ this.handleChangeF } 
-          value={ this.state.for }
-          id="c-for"
-        />
-        <button 
-          type="submit" 
-          onClick={ this.handleSubmitF }
-          className="submit"
-        > FOR </button>
-        <textarea 
-          placeholder="Add Against" 
-          onChange={ this.handleChangeA } 
-          value={ this.state.against }
-          id="c-against"
-        />
-        <button 
-          type="submit" 
-          onClick={ this.handleSubmitA }
-          className="submit"
-        > AGAINST </button> 
+      <div className="comment_submit">
+        <div className="submit_for">
+          <textarea 
+            placeholder="Add For" 
+            onChange={ this.handleChangeF } 
+            value={ this.state.for }
+            id="c-for"
+          />
+          <button 
+            type="submit" 
+            onClick={ this.handleSubmitF }
+            className="submit_me"
+          > FOR </button>
+        </div>
+        <div className="submit-against">
+          <textarea 
+            placeholder="Add Against" 
+            onChange={ this.handleChangeA } 
+            value={ this.state.against }
+            id="c-against"
+          />
+          <button 
+            type="submit" 
+            onClick={ this.handleSubmitA }
+            className="submit_me"
+          > AGAINST </button> 
+        </div>
       </div>
       
     );

@@ -1,0 +1,30 @@
+.comment_submit{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 12px;
+  .submit_for{
+    grid-column: 1;
+  }
+  .submit_against{
+    grid-column: 2;
+  }
+  textarea{
+    width: 100%;
+    margin-top: 12px;
+    max-height: 300px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2em;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  button{
+      display: block; 
+      margin: 12px auto;
+      width: 100px;
+      max-height: 100%;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 1.1em;
+      border-radius: 5px;
+      padding: 10px;
+    }
+}

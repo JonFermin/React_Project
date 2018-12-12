@@ -1,56 +1,61 @@
+@import "../Globals/_colors";
+
 .ViewPosts{
 	.title{
 		width: 100%;
 		text-transform: uppercase;
 		padding: 10px;
-		background: #f2f2f2;
 		margin-top: 30px; 
 		border-radius: 4px;
-		min-height: 100px;
-
-		display: grid;
-		grid-template-columns: 1fr 5fr;
-		grid-template-rows: 1fr;
+		color: black;
+		font-size: 36px;
+		font-weight: 700;
 	}
+
 
 	.comment_section{
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 12px;
+
 	}
 	.against_comments, .for_comments{
 		display: grid;
-		grid-template-columns: 1fr 3fr;
-		background: #f2f2f2;
+		grid-template-columns: 1fr 4fr;
+		grid-gap: 12px;
+		background: $main-1;
+		margin-bottom: 12px;
+		padding: 20px 5px;
+		border-radius: 5px;
 
 		.buttonContainer {
 			grid-column: 1;
 			grid-row: 1;
-			margin-top: 12px;
+			margin-top: -10px;
 			margin-left: 20px;
-			font-size: 20px;
+			font-size: 18px;
+			line-height: 10px;
+			padding-top: 12px;
 
 			&:hover{
 				.up, .down{
 				font-weight: 400;
+
 				}
 			}
-			.sortUp, .sortDown{
-				font-size: 36px;
-			}
-
 			.sortUp{
 				position: relative;
-				top:10px;
+				top:6px;
 				transition: .2s ease;
 				&:hover{
-					color: green;
+					color: $accent-5;
 				}
 			}
 			.sortDown{
+				position: relative;
 				transition: .2s ease;
 				&:hover{
-					color: red;
+					color: $accent-1;
 				}
 			}
 			.up, .down{
@@ -62,11 +67,12 @@
 			.down{
 				position: relative;
 				top: 5px;
-
 			}
 		}
 		.comment{
 			grid-column: 2;
+
+			padding-right: 30px;
 		}
 	}
 }

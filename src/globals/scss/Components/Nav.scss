@@ -1,9 +1,12 @@
+@import "../Globals/_colors";
+
 .Nav{
 	grid-column: 1;
 	grid-template-rows: 2;
 	font-size: 20pt;
 	padding: 10px;
 	margin: 10px;
+	// background: $main-1;
 }
 
 .logo{
@@ -13,7 +16,6 @@
 }
 
 .nav-list{
-	color: green;
 	text-align: left;
 	list-style-type: none;
 }

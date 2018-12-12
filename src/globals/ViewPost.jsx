@@ -109,10 +109,11 @@ class ViewPost extends Component {
           <AddComment my_key = {this.props.location.state.id.key}/>
 
           <div className = "comment_section">
+          <div className = "LEFT">
           { !!current.for &&
             Object.keys(current.for).map(function(key){
               return(
-                <div className = "against_comments">
+                  <div className="for_comments">
                   <p className = "comment"> {current.for[key].text} </p>
                    <div className = "buttonContainer">
                       <div onClick={ _this.handleUpvote.bind(this, current.for[key], key) }> 
@@ -134,12 +135,13 @@ class ViewPost extends Component {
                         <span className="down">{ current.for[key].downvote} </span>
                       </div>
                   </div>
-                </div>
+                  </div>
 
                 );
             })
           }
-        
+          </div>
+          <div className = "RIGHT">
           { !!current.against &&
             Object.keys(current.against).map(function(key){
               return(
@@ -173,6 +175,7 @@ class ViewPost extends Component {
             })
           }
 	      </div>
+        </div>
         </div>
 
 

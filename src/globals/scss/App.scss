@@ -3,6 +3,7 @@
 @import "./Components/Nav";
 @import "./Components/ViewPost";
 @import "./Components/Posts";
+@import "./Components/AddComment";
 
 @import "./Globals/_colors";
 @import "./Globals/_mixins";
@@ -15,7 +16,7 @@
 	padding: 0;
 }
 html {
-  overflow:   scroll;
+  overflow: scroll;
 }
 ::-webkit-scrollbar {
     width: 0px;
