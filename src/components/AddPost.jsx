@@ -23,7 +23,10 @@ class AddPost extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    
+    if (this.state.title == ""){
+      alert("Please Enter a Question");
+      return;
+    }
     this.props.firebase.ref('posts').push({
       title: this.state.title,
       upvote: 0,

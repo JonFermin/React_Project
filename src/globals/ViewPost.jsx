@@ -9,35 +9,18 @@ var FontAwesome = require('react-fontawesome');
 
 
 class ViewPost extends Component { 
-
-
-  handleUpvote = (post, key) => {
-    this.props.firebase.ref('posts/' + key).set({
-      title: post.title,
+  handleCommentUpvote = (post, type, my_key) => {
+    // console.log(my_key);
+    this.props.firebase.ref('posts/' + this.props.location.state.id.key + "/for/" + my_key).set({
+      text: post.text,
       upvote: post.upvote + 1,
       downvote: post.downvote
     });
   }
 
-  handleDownvote = (post, key) => {
-    this.props.firebase.ref('posts/' + key).set({
-      title: post.title,
-      upvote: post.upvote,
-      downvote: post.downvote + 1
-    });
-  }
-
-  handleCommentUpvote = (post, key) => {
-    this.props.firebase.ref('posts/' + key).set({
-      title: post.title,
-      upvote: post.upvote + 1,
-      downvote: post.downvote
-    });
-  }
-
-  handleCommentDownvote = (post, key) => {
-    this.props.firebase.ref('posts/' + key).set({
-      title: post.title,
+  handleCommentDownvote = (post, my_key) => {
+    this.props.firebase.ref('posts/' + this.props.location.state.id.key).set({
+      text: post.text,
       upvote: post.upvote,
       downvote: post.downvote + 1
     });
@@ -49,13 +32,9 @@ class ViewPost extends Component {
     this.state = {
     	key: '',
       title: '',
-      upvote: '',
-      downvote:'',
       for: {},
       against: {},
     };
-    // this.onInputChange = this.onInputChange.bind(this);
-    // this.onHandleSubmit = this.onHandleSubmit.bind(this);
   }
 	componentDidMount() {
       var key = this.props.location.state.id.key;
@@ -66,18 +45,18 @@ class ViewPost extends Component {
         title: snapshot.val().title,
         upvote: snapshot.val().upvote,
         downvote: snapshot.val().downvote,
-        for: snapshot.val()
+        for: snapshot.val().for,
+        against: snapshot.val().against,
       });
     });
-
-
   };
 	render() {
 		let posts = this.props.posts;
     let _this = this;
-		let key = this.props.location.state.id;
+		let my_key = this.state.key;
+    // console.log(my_key);
     var current;
-    
+
     for(var test in posts) {
       if(posts.hasOwnProperty(test)) {
           current = posts[test];
@@ -85,13 +64,6 @@ class ViewPost extends Component {
       }
     }
 
-
-    var for_com;
-    var against_com;
-
-
-    var ForElement;
-          
 	    if (this.props.loading) {
 	      return (
 	        <div>
@@ -99,7 +71,8 @@ class ViewPost extends Component {
 	        </div>
 	      );
 	    }
-    	
+    
+    console.log(this.state);
 		return (
 	      <div className="ViewPosts">
           <div className="title">
@@ -110,29 +83,29 @@ class ViewPost extends Component {
 
           <div className = "comment_section">
           <div className = "LEFT">
-          { !!current.for &&
-            Object.keys(current.for).reverse().map(function(key){
+          { !!_this.state.for &&
+            Object.keys(this.state.for).reverse().map(function(key){
               return(
                   <div className="for_comments">
-                  <p className = "comment"> {current.for[key].text} </p>
+                  <p className = "comment"> {_this.state.for[key].text} </p>
                    <div className = "buttonContainer">
-                      <div onClick={ _this.handleUpvote.bind(this, current.for[key], key) }> 
+                      <div onClick={ _this.handleCommentUpvote.bind(this, _this.state.for[key], "for") }> 
                           <FontAwesome
                             className='sortUp'
                             name='sort-up'
                             size='lg'
                             // spin
                           />
-                        <span className="up">{ current.for[key].upvote }</span>
+                        <span className="up">{ _this.state.for[key].upvote }</span>
                       </div>
-                      <div onClick={ _this.handleUpvote.bind(this, current.for[key], key) }> 
+                      <div onClick={ _this.handleCommentDownvote.bind(this, _this.state.for[key], "for") }> 
                           <FontAwesome
                             className='sortDown'
                             name='sort-down'
                             size='lg'
                             // spin
                           />
-                        <span className="down">{ current.for[key].downvote} </span>
+                        <span className="down">{ _this.state.for[key].downvote} </span>
                       </div>
                   </div>
                   </div>
@@ -142,29 +115,29 @@ class ViewPost extends Component {
           }
           </div>
           <div className = "RIGHT">
-          { !!current.against &&
-            Object.keys(current.against).map(function(key){
+          { !!_this.state.against &&
+            Object.keys(_this.state.against).reverse().map(function(key){
               return(
                 <div className = "against_comments">
-                  <p className = "comment"> {current.against[key].text} </p>
+                  <p className = "comment"> {_this.state.against[key].text} </p>
                    <div className = "buttonContainer">
-                      <div onClick={ _this.handleUpvote.bind(this, posts[key], key) }> 
+                      <div onClick={ _this.handleCommentUpvote.bind(this, _this.state.against[key].toString(), "against") }> 
                           <FontAwesome
                             className='sortUp'
                             name='sort-up'
                             size='lg'
                             // spin
                           />
-                        <span className="up">{ current.against[key].upvote }</span>
+                        <span className="up">{ _this.state.against[key].upvote }</span>
                       </div>
-                      <div onClick={ _this.handleUpvote.bind(this, posts[key], key) }> 
+                      <div onClick={ _this.handleCommentDownvote.bind(this, _this.state.against[key].toString(), "against") }> 
                           <FontAwesome
                             className='sortDown'
                             name='sort-down'
                             size='lg'
                             // spin
                           />
-                        <span className="down">{ current.against[key].downvote} </span>
+                        <span className="down">{ _this.state.against[key].downvote} </span>
                       </div>
                   </div>
 
