@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import '../globals/css/App.css';
+import { browserHistory } from 'react-router';
+// import { withRouter } from 'react-router-dom';
 
 class AddPost extends Component {
   constructor() {
@@ -35,6 +37,7 @@ class AddPost extends Component {
     this.setState({
       title: ''
     });
+    browserHistory.push('/')
   }
 
   render() {
