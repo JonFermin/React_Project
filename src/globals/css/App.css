@@ -123,7 +123,7 @@
     padding-bottom: 12px;
     transition: .2s ease; }
     .Posts #postHeader:hover {
-      color: darkgrey; }
+      color: #70a7a9; }
   .Posts .buttonContainer {
     grid-column: 1;
     grid-row: 1;
@@ -139,7 +139,7 @@
       top: 10px;
       transition: .2s ease; }
       .Posts .buttonContainer .sortUp:hover {
-        color: #36B1BF; }
+        color: #90EE90; }
     .Posts .buttonContainer .sortDown {
       transition: .2s ease; }
       .Posts .buttonContainer .sortDown:hover {
