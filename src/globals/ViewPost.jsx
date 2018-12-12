@@ -10,8 +10,8 @@ var FontAwesome = require('react-fontawesome');
 
 class ViewPost extends Component { 
   handleCommentUpvote = (post, type, my_key) => {
-    // console.log(my_key);
-    this.props.firebase.ref('posts/' + this.props.location.state.id.key + "/for/" + my_key).set({
+    console.log(my_key);
+    this.props.firebase.ref('posts/' + this.state.key + "/for/" + my_key).set({
       text: post.text,
       upvote: post.upvote + 1,
       downvote: post.downvote
@@ -53,26 +53,13 @@ class ViewPost extends Component {
 	render() {
 		let posts = this.props.posts;
     let _this = this;
-		let my_key = this.state.key;
-    // console.log(my_key);
-    var current;
-
-    for(var test in posts) {
-      if(posts.hasOwnProperty(test)) {
-          current = posts[test];
-          break;
-      }
+    if (this.props.loading) {
+      return (
+        <div>
+          <img className="loading" alt="loading icon" src="https://loading.io/spinners/typing/lg.-text-entering-comment-loader.gif"/>
+        </div>
+      );
     }
-
-	    if (this.props.loading) {
-	      return (
-	        <div>
-	          <img className="loading" alt="loading icon" src="https://loading.io/spinners/typing/lg.-text-entering-comment-loader.gif"/>
-	        </div>
-	      );
-	    }
-    
-    console.log(this.state);
 		return (
 	      <div className="ViewPosts">
           <div className="title">
@@ -89,7 +76,7 @@ class ViewPost extends Component {
                   <div className="for_comments">
                   <p className = "comment"> {_this.state.for[key].text} </p>
                    <div className = "buttonContainer">
-                      <div onClick={ _this.handleCommentUpvote.bind(this, _this.state.for[key], "for") }> 
+                      <div onClick={ _this.handleCommentUpvote.bind(this, key, "for") }> 
                           <FontAwesome
                             className='sortUp'
                             name='sort-up'

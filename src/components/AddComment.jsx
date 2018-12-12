@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import * as firebase from "firebase";
 
+
 class AddComment extends Component {
   constructor() {
     super();
@@ -9,12 +10,14 @@ class AddComment extends Component {
     this.handleChangeA = this.handleChangeA.bind(this);
     this.handleSubmitF = this.handleSubmitF.bind(this);
     this.handleSubmitA = this.handleSubmitA.bind(this);
-    
   }
-
   state = {
     for: '',
-    against: ''
+    against: '',
+    err: {},
+    err2: {},
+    errtext:'Add For Comment',
+    errtext2:'Add Against Comment'
   };
 
   handleChangeF = (f) => {
@@ -31,7 +34,16 @@ class AddComment extends Component {
 
   handleSubmitF = (e) => {
     e.preventDefault();
-    
+    console.log(e);
+    if (this.state.for === ""){
+      this.setState({
+        err: {
+          borderColor: "red",
+        },
+        errtext:'Invalid Input',
+      });
+      return;
+    }
     firebase.database().ref('posts/' + this.props.my_key + "/for").push({
       text: this.state.for,
       upvote: 0,
@@ -39,12 +51,24 @@ class AddComment extends Component {
     });
 
     this.setState({
-      text: ''
+      text: '',
+      err: {},
+      errtext:'Add For Comment',
+      for: ''
     });
   }
 
   handleSubmitA = (e) => {
     e.preventDefault();
+    if (this.state.against === ""){
+      this.setState({
+        err2: {
+          borderColor: "red",
+        },
+        errtext2:'Invalid Input',
+      });
+      return;
+    }
     
     firebase.database().ref('posts/' + this.props.my_key + "/against").push({
       text: this.state.against,
@@ -53,20 +77,25 @@ class AddComment extends Component {
     });
 
     this.setState({
-      text: ''
+      text: '',
+      err2: {},
+      errtext2:'Add Against Comment',
+      against: ''
     });
   }
 
 
   render() {
+    
     return (
       <div className="comment_submit">
         <div className="submit_for">
           <textarea 
-            placeholder="Add For" 
+            placeholder={this.state.errtext}
             onChange={ this.handleChangeF } 
             value={ this.state.for }
             id="c-for"
+            style={this.state.err}
           />
           <button 
             type="submit" 
@@ -76,10 +105,11 @@ class AddComment extends Component {
         </div>
         <div className="submit-against">
           <textarea 
-            placeholder="Add Against" 
+            placeholder={this.state.errtext2} 
             onChange={ this.handleChangeA } 
             value={ this.state.against }
             id="c-against"
+            style={this.state.err2}
           />
           <button 
             type="submit" 
