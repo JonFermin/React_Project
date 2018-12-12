@@ -9,21 +9,21 @@ var FontAwesome = require('react-fontawesome');
 
 
 class ViewPost extends Component { 
-  handleCommentUpvote = (post, type, my_key) => {
-    console.log(my_key);
-    this.props.firebase.ref('posts/' + this.state.key + "/for/" + my_key).set({
+  handleCommentUpvote = (post, my_key, type) => {
+    this.props.firebase.ref('posts/' + this.state.key + "/" + type + "/" + my_key).set({
       text: post.text,
       upvote: post.upvote + 1,
       downvote: post.downvote
     });
   }
 
-  handleCommentDownvote = (post, my_key) => {
-    this.props.firebase.ref('posts/' + this.props.location.state.id.key).set({
+  handleCommentDownvote = (post, my_key, type) => {
+    this.props.firebase.ref('posts/' + this.state.key + "/" + type + "/" + my_key).set({
       text: post.text,
       upvote: post.upvote,
       downvote: post.downvote + 1
     });
+
   }
 
 
@@ -51,6 +51,9 @@ class ViewPost extends Component {
     });
   };
 	render() {
+    Object.keys(this.state.for).map(function(key){
+      console.log(key);
+    });
 		let posts = this.props.posts;
     let _this = this;
     if (this.props.loading) {
@@ -76,7 +79,7 @@ class ViewPost extends Component {
                   <div className="for_comments">
                   <p className = "comment"> {_this.state.for[key].text} </p>
                    <div className = "buttonContainer">
-                      <div onClick={ _this.handleCommentUpvote.bind(this, key, "for") }> 
+                      <div onClick={ _this.handleCommentUpvote.bind(this, _this.state.for[key], key, "for") }> 
                           <FontAwesome
                             className='sortUp'
                             name='sort-up'
@@ -85,7 +88,7 @@ class ViewPost extends Component {
                           />
                         <span className="up">{ _this.state.for[key].upvote }</span>
                       </div>
-                      <div onClick={ _this.handleCommentDownvote.bind(this, _this.state.for[key], "for") }> 
+                      <div onClick={ _this.handleCommentDownvote.bind(this, _this.state.for[key], key, "for") }> 
                           <FontAwesome
                             className='sortDown'
                             name='sort-down'
@@ -108,7 +111,7 @@ class ViewPost extends Component {
                 <div className = "against_comments">
                   <p className = "comment"> {_this.state.against[key].text} </p>
                    <div className = "buttonContainer">
-                      <div onClick={ _this.handleCommentUpvote.bind(this, _this.state.against[key].toString(), "against") }> 
+                      <div onClick={ _this.handleCommentUpvote.bind(this, _this.state.against[key], key, "against") }> 
                           <FontAwesome
                             className='sortUp'
                             name='sort-up'
@@ -117,7 +120,7 @@ class ViewPost extends Component {
                           />
                         <span className="up">{ _this.state.against[key].upvote }</span>
                       </div>
-                      <div onClick={ _this.handleCommentDownvote.bind(this, _this.state.against[key].toString(), "against") }> 
+                      <div onClick={ _this.handleCommentDownvote.bind(this, _this.state.against[key], key, "against") }> 
                           <FontAwesome
                             className='sortDown'
                             name='sort-down'
