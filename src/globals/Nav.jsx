@@ -12,8 +12,9 @@ class Nav extends Component {
       	<Link to={"/"}><img className="logo" alt="logo-icon" src={logo} /></Link>
       	<ul className="nav-list">
         	<li>
-          <div class = "writeDiv">
-        		<Link to={"add-post"}><img id ="writeTest" src={img} alt="test"/></Link></div>
+          <div className = "writeDiv">
+        		<Link to={"add-post"}><img id ="writeTest" src={img} alt="test"/></Link>
+          </div>
         	</li>
         </ul>
       </div>

@@ -10,7 +10,7 @@ class App extends Component {
     super();
 
     // Initialize Firebase
-    firebase.initializeApp(config);
+    this.app = firebase.initializeApp(config);
   }
 
   state = {
@@ -41,6 +41,7 @@ class App extends Component {
           posts: this.state.posts,
           loading: this.state.loading
         })}
+        
       </div>
     );
   }

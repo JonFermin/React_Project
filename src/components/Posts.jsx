@@ -36,7 +36,7 @@ class Posts extends Component {
         </div>
       );
     }
-                // <div> { JSON.stringify(key) } </div>
+    console.log(posts);
     return (
 
       
@@ -60,7 +60,7 @@ class Posts extends Component {
                             size='lg'
                             // spin
                           />
-                          <span className="up">{ posts[key].upvote }</span>
+                        <span className="up">{ posts[key].upvote }</span>
                       </div>
                       <div onClick={ _this.handleDownvote.bind(this, posts[key], key) }> 
                           <FontAwesome

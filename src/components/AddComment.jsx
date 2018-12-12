@@ -1,46 +1,90 @@
 import React, { Component } from 'react';
 
+import * as firebase from "firebase";
+
 class AddComment extends Component {
   constructor() {
     super();
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChangeF = this.handleChangeF.bind(this);
+    this.handleChangeA = this.handleChangeA.bind(this);
+    this.handleSubmitF = this.handleSubmitF.bind(this);
+    this.handleSubmitA = this.handleSubmitA.bind(this);
+    
   }
 
   state = {
-    title: ''
+    for: '',
+    against: ''
   };
 
-  handleChange = (e) => {
+  handleChangeF = (f) => {
     this.setState({
-      title: e.target.value
+      for: f.target.value
     });
   }
 
-  handleSubmit = (e) => {
+  handleChangeA = (a) => {
+    this.setState({
+      against: a.target.value
+    });
+  }
+
+  handleSubmitF = (e) => {
     e.preventDefault();
     
-    this.props.firebase.ref('posts').push({
-      title: this.state.title,
+    firebase.database().ref('posts/' + this.props.my_key + "/for").push({
+      text: this.state.for,
       upvote: 0,
       downvote: 0,
     });
 
     this.setState({
-      title: ''
+      text: ''
     });
   }
+
+  handleSubmitA = (e) => {
+    e.preventDefault();
+    
+    firebase.database().ref('posts/' + this.props.my_key + "/against").push({
+      text: this.state.against,
+      upvote: 0,
+      downvote: 0,
+    });
+
+    this.setState({
+      text: ''
+    });
+  }
+
 
   render() {
     return (
       <div>
-        <input type="text" placeholder="Add For" id="c-for"/>
-        <input type="button" value="Submit"/> 
-
-        <input type="text" placeholder="Add Against" id="c-against"/>
-        <input type="button" value="Submit"/> 
+        <textarea 
+          placeholder="Add For" 
+          onChange={ this.handleChangeF } 
+          value={ this.state.for }
+          id="c-for"
+        />
+        <button 
+          type="submit" 
+          onClick={ this.handleSubmitF }
+          className="submit"
+        > FOR </button>
+        <textarea 
+          placeholder="Add Against" 
+          onChange={ this.handleChangeA } 
+          value={ this.state.against }
+          id="c-against"
+        />
+        <button 
+          type="submit" 
+          onClick={ this.handleSubmitA }
+          className="submit"
+        > AGAINST </button> 
       </div>
+      
     );
   }
 }

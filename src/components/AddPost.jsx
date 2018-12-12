@@ -26,6 +26,10 @@ class AddPost extends Component {
       title: this.state.title,
       upvote: 0,
       downvote: 0,
+      for: {
+      },
+      against: {
+      }
     });
 
     this.setState({
