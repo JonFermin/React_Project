@@ -40,33 +40,44 @@
   grid-template-columns: 1fr 5fr;
   grid-template-rows: 1fr; }
 
-.ViewPosts .buttonContainer {
-  grid-column: 1;
-  grid-row: 1;
-  margin-top: 12px;
-  margin-left: 20px;
-  font-size: 20px; }
-  .ViewPosts .buttonContainer:hover .up, .ViewPosts .buttonContainer:hover .down {
-    font-weight: 400; }
-  .ViewPosts .buttonContainer .sortUp, .ViewPosts .buttonContainer .sortDown {
-    font-size: 36px; }
-  .ViewPosts .buttonContainer .sortUp {
-    position: relative;
-    top: 10px;
-    transition: .2s ease; }
-    .ViewPosts .buttonContainer .sortUp:hover {
-      color: green; }
-  .ViewPosts .buttonContainer .sortDown {
-    transition: .2s ease; }
-    .ViewPosts .buttonContainer .sortDown:hover {
-      color: red; }
-  .ViewPosts .buttonContainer .up, .ViewPosts .buttonContainer .down {
-    margin-left: 3px; }
-  .ViewPosts .buttonContainer .up {
-    position: relative; }
-  .ViewPosts .buttonContainer .down {
-    position: relative;
-    top: 5px; }
+.ViewPosts .comment_section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 12px; }
+
+.ViewPosts .against_comments, .ViewPosts .for_comments {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  background: #f2f2f2; }
+  .ViewPosts .against_comments .buttonContainer, .ViewPosts .for_comments .buttonContainer {
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: 12px;
+    margin-left: 20px;
+    font-size: 20px; }
+    .ViewPosts .against_comments .buttonContainer:hover .up, .ViewPosts .against_comments .buttonContainer:hover .down, .ViewPosts .for_comments .buttonContainer:hover .up, .ViewPosts .for_comments .buttonContainer:hover .down {
+      font-weight: 400; }
+    .ViewPosts .against_comments .buttonContainer .sortUp, .ViewPosts .against_comments .buttonContainer .sortDown, .ViewPosts .for_comments .buttonContainer .sortUp, .ViewPosts .for_comments .buttonContainer .sortDown {
+      font-size: 36px; }
+    .ViewPosts .against_comments .buttonContainer .sortUp, .ViewPosts .for_comments .buttonContainer .sortUp {
+      position: relative;
+      top: 10px;
+      transition: .2s ease; }
+      .ViewPosts .against_comments .buttonContainer .sortUp:hover, .ViewPosts .for_comments .buttonContainer .sortUp:hover {
+        color: green; }
+    .ViewPosts .against_comments .buttonContainer .sortDown, .ViewPosts .for_comments .buttonContainer .sortDown {
+      transition: .2s ease; }
+      .ViewPosts .against_comments .buttonContainer .sortDown:hover, .ViewPosts .for_comments .buttonContainer .sortDown:hover {
+        color: red; }
+    .ViewPosts .against_comments .buttonContainer .up, .ViewPosts .against_comments .buttonContainer .down, .ViewPosts .for_comments .buttonContainer .up, .ViewPosts .for_comments .buttonContainer .down {
+      margin-left: 3px; }
+    .ViewPosts .against_comments .buttonContainer .up, .ViewPosts .for_comments .buttonContainer .up {
+      position: relative; }
+    .ViewPosts .against_comments .buttonContainer .down, .ViewPosts .for_comments .buttonContainer .down {
+      position: relative;
+      top: 5px; }
+  .ViewPosts .against_comments .comment, .ViewPosts .for_comments .comment {
+    grid-column: 2; }
 
 .Posts {
   grid-column: 2;
