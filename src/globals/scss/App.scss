@@ -17,6 +17,7 @@
 }
 html {
   overflow: scroll;
+
 }
 ::-webkit-scrollbar {
     width: 0px;
@@ -28,6 +29,7 @@ html {
 	background: white;
 	grid-template-columns: 1fr 2fr 1fr;
 	height: 100vh;
+	background-color: #F0F0F0;
 }
 
 .loading{
@@ -43,6 +45,7 @@ html {
 	font-size: 1.2em;
 	padding: 20px;
 	border-radius: 5px;
+	
 }
 
 .submit{

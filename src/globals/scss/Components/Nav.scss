@@ -6,6 +6,9 @@
 	font-size: 20pt;
 	padding: 10px;
 	margin: 10px;
+	margin-right: 40px;
+	border-radius: 2px;
+
 }
 
 .logo{
@@ -22,14 +25,17 @@
 	margin-left: 20%;
 	margin-top: 30px;
 	transition: .3s ease;
+	/*font-family: 'Verdana';*/
+	
 	li{
-		color: black;
+		
+		a{
+			color:black;
+		}
 		a:hover{
-			color: red;
+			color:darkgrey;
 		}
-		a:visited{
-			color: black;
-		}
+		
 	}
 	
 }

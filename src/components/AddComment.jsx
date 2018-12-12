@@ -97,7 +97,7 @@ class AddComment extends Component {
             id="c-for"
             style={this.state.err}
           />
-          <button 
+          <button id="Fors"  
             type="submit" 
             onClick={ this.handleSubmitF }
             className="submit_me"
@@ -111,7 +111,7 @@ class AddComment extends Component {
             id="c-against"
             style={this.state.err2}
           />
-          <button 
+          <button id="Agains"
             type="submit" 
             onClick={ this.handleSubmitA }
             className="submit_me"

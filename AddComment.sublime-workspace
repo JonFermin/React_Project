@@ -1,0 +1,578 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"li",
+				"li\tTag"
+			],
+			[
+				"border",
+				"border-color\tproperty"
+			],
+			[
+				"back",
+				"background-color\tproperty"
+			],
+			[
+				"backgrou",
+				"background-repeat\tproperty"
+			],
+			[
+				"max",
+				"max-width\tproperty"
+			],
+			[
+				"content",
+				"align-content\tproperty"
+			],
+			[
+				"txt",
+				"text-align\tproperty"
+			],
+			[
+				"background-c",
+				"background-color\tproperty"
+			],
+			[
+				"error",
+				"errorMessage"
+			],
+			[
+				"margin",
+				"margin-bottom\tproperty"
+			],
+			[
+				"bor",
+				"border-radius\tproperty"
+			],
+			[
+				"tx",
+				"text-align\tproperty"
+			],
+			[
+				"font",
+				"font-weight\tproperty"
+			],
+			[
+				"conte",
+				"align-content\tproperty"
+			],
+			[
+				"align",
+				"align-content\tproperty"
+			],
+			[
+				"min",
+				"min-height\tproperty"
+			],
+			[
+				"list-style-",
+				"list-style-type\tproperty"
+			],
+			[
+				"list-sty",
+				"list-style-type\tproperty"
+			],
+			[
+				"wd",
+				"width\tproperty"
+			],
+			[
+				"wi",
+				"width\tproperty"
+			],
+			[
+				"fa",
+				"fadeOut"
+			],
+			[
+				"text",
+				"text-align\tproperty"
+			],
+			[
+				"fade",
+				"fadeIn"
+			],
+			[
+				"i",
+				"id\tAttr"
+			],
+			[
+				"ru",
+				"run"
+			],
+			[
+				"bac",
+				"backgroundColor"
+			],
+			[
+				"m",
+				"mousemove"
+			],
+			[
+				"ba",
+				"backgroundColor"
+			],
+			[
+				"backg",
+				"background"
+			],
+			[
+				"my",
+				"myDiv"
+			],
+			[
+				"p",
+				"person"
+			],
+			[
+				"pro",
+				"prompt"
+			],
+			[
+				"black",
+				"blackbox"
+			],
+			[
+				"Font",
+				"font-family"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"con",
+				"align-content"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"alig",
+				"align-items"
+			],
+			[
+				"background",
+				"background-attachment"
+			],
+			[
+				"r",
+				"rgba()"
+			],
+			[
+				"js",
+				"jsBack"
+			],
+			[
+				"audi",
+				"audio\tTag"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
+				"co",
+				"counter"
+			],
+			[
+				"h",
+				"h1\tTag"
+			],
+			[
+				"sec",
+				"secTitle"
+			],
+			[
+				"s",
+				"style"
+			],
+			[
+				"main",
+				"mainParagraph"
+			],
+			[
+				"imag",
+				"background-image"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"text-a",
+				"text-align"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"a",
+				"adjective2"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"pe",
+				"person-input"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"hea",
+				"header\tTag"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"rg",
+				"rgb()"
+			],
+			[
+				"rb",
+				"rgba()"
+			],
+			[
+				"he",
+				"header\tTag"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"rgb",
+				"rgba()"
+			],
+			[
+				"Back",
+				"background"
+			],
+			[
+				"ti",
+				"title\tTag"
+			],
+			[
+				"fig",
+				"figcaption\tTag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/ClaireSutton/Desktop/React_Project/src/globals/scss/Components/ViewPost.scss",
+		"/C/Users/ClaireSutton/Desktop/React_Project/src/components/AddComment.jsx",
+		"/C/Users/ClaireSutton/Desktop/React_Project/src/index.js",
+		"/C/Users/ClaireSutton/Desktop/React_Project/src/routes.js",
+		"/C/Users/ClaireSutton/Desktop/React_Project/src/components/Posts.jsx",
+		"/C/Users/ClaireSutton/Desktop/React_Project/src/globals/ViewPost.jsx",
+		"/C/Users/ClaireSutton/Desktop/reactproject/package.json",
+		"/C/Users/ClaireSutton/Desktop/reactproject/reddit-clone/src/index.js",
+		"/C/Users/ClaireSutton/Desktop/reactproject/reddit-clone/src/containers/App/index.js",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/labs.html",
+		"/C/Users/ClaireSutton/Desktop/reactproject/reddit-clone/src/App.js",
+		"/C/Users/ClaireSutton/Desktop/reactproject/learningvue/public/index.html",
+		"/C/Users/ClaireSutton/Desktop/reactproject/learningvue/src/views/Home.vue",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/pinktax.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/pinktax.css",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/project2/index.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/loading.css",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/loading.js",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/projects.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/project2.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/project2/nasaapi.css",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/project2/nasaapi.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/project2/nasaapitest.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/project2/asteroids.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/loading.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/asteroid.js",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/asteroids.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/project2/lab4.js",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/lab4.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/pom.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/asteroid.ejs",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/asteroid.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/loading2.css",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/natgeoapi.js",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/project2/css/style.css",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/loading",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/project2/css/bootstrap.css",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/project2/css/bootstrap",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/project2/css/style",
+		"/C/Users/ClaireSutton/Desktop/index.html",
+		"/C/Users/ClaireSutton/Desktop/bootstrap.css",
+		"/C/Users/ClaireSutton/Desktop/style.css",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/project2main.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/css/pj2.css",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/js/pj2jq.js",
+		"/C/Users/ClaireSutton/Downloads/Echoes Free Website Template - Free-CSS.com.zip",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/lab5.css",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/lab5.js",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/lab5.html",
+		"/C/Users/ClaireSutton/Desktop/loader/js/index.js",
+		"/C/Users/ClaireSutton/Desktop/loader/css/style.css",
+		"/C/Users/ClaireSutton/Desktop/loader/index.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/index.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/lab4.js",
+		"/C/Users/ClaireSutton/Downloads/south.zip",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/worst.css",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/worst1.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/worst.html",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/multimedia-gallery.html",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/css/mq.css",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/mq.html",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/mqstart.html",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/ml2.html",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/media-query-demo.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/midterm.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/midterm/index.css",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/midterm/safety.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/midterm/index.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/midterm/destination.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/project1.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/js/project1.js",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/midterm/trips.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/index.css",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/aboutme.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/website1.css",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/css/lab3.css",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/css/project1.css",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/js/ml2.js",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/media-query-demo.css",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/dom-manipulator.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/trial.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/lab2.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/lab3.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/js/lab3.js",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/js/lab2.js",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/css/lab2.css",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/js/arrays.js",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/arrays.html",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/css/audio-player.css",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/what.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/lab1.png",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/audio-player.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/smallhome.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/debug_quiz.js",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/debug_js.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fwd/mmsite2.css",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/index.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fnd/aboutme.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fnd/projects.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fnd/smallhome.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fnd/index.html",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/aboutme.html",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/projects.html",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/smallhome.html",
+		"/C/Users/ClaireSutton/Documents/Atlas Front End/fnd/indext.html",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/motion/motion.html",
+		"/C/Users/ClaireSutton/Desktop/fnd/index.html",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/newmain.html",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/oldindex.html",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/study-guide.html",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/js/study-guide.js",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/css/study-guide.css",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/css/portal-design.css",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/js/arrays-demo.js",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/js/study-guide1.js",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/js/study-guide1",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/blank.html",
+		"/C/Users/ClaireSutton/Desktop/study-guide-start/study-guide.css",
+		"/C/Users/ClaireSutton/Desktop/study-guide-start/study-guide.js",
+		"/C/Users/ClaireSutton/Desktop/study-guide-start/study-guide.html",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/css/ghibli.css",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/ghibli.html",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/js/game-one.js",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/game-one.html",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/css/game-one.css",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/css/defeat.css",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/css/victory.css",
+		"/C/Users/ClaireSutton/Documents/Atlas 2100 Web/public_html/web/victory.html"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"/>\n",
+			"value"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 54.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "AddComment.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 375.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
