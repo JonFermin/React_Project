@@ -51,9 +51,6 @@ class ViewPost extends Component {
     });
   };
 	render() {
-    Object.keys(this.state.for).map(function(key){
-      console.log(key);
-    });
 		let posts = this.props.posts;
     let _this = this;
     if (this.props.loading) {
