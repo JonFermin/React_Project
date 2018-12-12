@@ -6,11 +6,12 @@
 	font-size: 20pt;
 	padding: 10px;
 	margin: 10px;
-	// background: $main-1;
 }
 
 .logo{
-	width: 100px;
+	width: 200px;
+	margin-left: 20%;
+	margin-top: 30px;
 
 	height: auto;
 }
@@ -18,6 +19,19 @@
 .nav-list{
 	text-align: left;
 	list-style-type: none;
+	margin-left: 20%;
+	margin-top: 30px;
+	transition: .3s ease;
+	li{
+		color: black;
+		a:hover{
+			color: red;
+		}
+		a:visited{
+			color: black;
+		}
+	}
+	
 }
 
 #writeTest{
@@ -32,7 +46,7 @@ opacity: .5;
 
 
 .writeDiv{
-	position: absolute;
-	left: 95%;
-	top: 5%;
+	position: fixed;
+	right: 0;
+	top: 30px;
 }

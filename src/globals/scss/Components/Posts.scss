@@ -22,12 +22,13 @@
 		
 	}
 	#postHeader{
-		margin-top: 25px;
+		margin-top: 12px;
 		grid-column: 2;
 		font-size: 1.5em;
 		font-weight: 700;
 		text-decoration: none;
 		color: black;
+		padding-bottom: 12px;
 		transition: .2s ease;
 		&:hover{
 		  color: $main-2;
