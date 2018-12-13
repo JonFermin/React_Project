@@ -6,7 +6,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.9",
     "@fortawesome/free-solid-svg-icons": "^5.6.0",
     "@fortawesome/react-fontawesome": "^0.1.3",
-    "firebase": "^4.1.1",
+    "firebase": "^5.7.0",
     "font-awesome": "^4.7.0",
     "i": "^0.3.6",
     "node-sass": "^4.11.0",
@@ -19,7 +19,7 @@
     "sassy": "^1.0.0"
   },
   "devDependencies": {
-    "react-scripts": "1.0.7"
+    "react-scripts": "^2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -27,5 +27,11 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "sassy": "node-sass --watch src/globals/scss/App.scss src/globals/css/App.css"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

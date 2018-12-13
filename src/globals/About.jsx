@@ -4,6 +4,8 @@ import { withRouter } from "react-router";
 
 
 
+
+
 var FontAwesome = require('react-fontawesome');
 
 class About extends Component { 
@@ -22,7 +24,8 @@ class About extends Component {
      
 
       <footer>
-        This website is a reddit inspired react based app that allows you to post a topic and comment on those topics.It also has the function of upvoting and downvoting both the post and the comments. Happy Debating!
+        This website is a reddit inspired react based app that allows you to post a topic and comment on those topics. 
+        It also has the function of upvoting and downvoting both the debate posts as well as the comments.<br/><br/> Happy Debating!
       </footer>
     </div>
   );
