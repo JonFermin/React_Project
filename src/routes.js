@@ -5,7 +5,7 @@ import App from './globals/App';
 import ViewPost from './globals/ViewPost';
 import Posts from './components/Posts';
 import AddPost from './components/AddPost';
-
+import About from './globals/About';
 
 
 
@@ -17,8 +17,11 @@ const Routes = (props) => (
       <Route path="/add-post" component={ AddPost } />
       <Route path="/view-post" component={ ViewPost } >
       	<Route path="/view-post/:id" component={ViewPost} />
+        
       </Route>
+      <Route path="/about" component={About}/>
     </Route>
+
   </Router>
 );
 
