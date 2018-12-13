@@ -1,7 +1,7 @@
 # Debate Questions
 A React application that allows for posts, comments, upvotes, etc. Leverages Firebase as well as React.
 
-![Example](./debate.png)
+![Example](screencapture-debate-questions-reddit-herokuapp-2018-12-13-11_34_23.png)
 
 ## Installation
 ```
