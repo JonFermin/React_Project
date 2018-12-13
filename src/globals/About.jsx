@@ -16,7 +16,7 @@ class About extends Component {
     
     
     return (
-         <div>
+    <div className = "about_page">
       <header>
         What is this Website?
       </header>

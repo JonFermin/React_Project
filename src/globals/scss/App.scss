@@ -26,10 +26,9 @@ html {
 
 .App{
 	display: grid;
-	background: white;
 	grid-template-columns: 1fr 2fr 1fr;
 	height: 100vh;
-	background-color: #F0F0F0;
+	background-color: $main-3;
 }
 
 .loading{
@@ -45,15 +44,37 @@ html {
 	font-size: 1.2em;
 	padding: 20px;
 	border-radius: 5px;
-	
+	outline: none;
+	transition: .3s;
+	&:focus{
+		box-shadow: -1px -1px .3px #606dbc ;
+	}
 }
 
 .submit{
-	width: 100px;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 1.1em;
-	border-radius: 5px;
-	margin-top: 10px;
-	margin-left: 85%;
-	padding: 10px;
+	float: right;
+	color: black;
+      font-weight: 600;
+      display: block; 
+      margin: 12px auto;
+      width: 100px;
+      max-height: 100%;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 1.1em;
+      border-radius: 5px;
+      padding: 10px;
+
+      transition: .5s;
+
+      &:hover{
+        background: repeating-linear-gradient(
+          45deg,
+          #606dbc,
+          #606dbc 10px,
+          #465298 10px,
+          #465298 20px
+        );
+        opacity: .8;
+        color:white;
+      }
 }
